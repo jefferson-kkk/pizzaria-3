@@ -121,12 +121,13 @@ function registrarVenda() {
     document.getElementById("venda-pedido").value = '';
     document.getElementById("venda-preco").value = '';
 
-    document.getElementById("relatorio-vendas")="Venda registrada com sucesso!";
+    document.getElementById("text")="Venda registrada com sucesso!";
   } else {
     document.getElementById("text")="Por favor, preencha todos os campos corretamente.";
   }
 }
 function gerarRelatorioVendas() {
+  
   // Carrega vendas do localStorage se existirem
   if(localStorage.getItem('vendas')) {
     vendas = JSON.parse(localStorage.getItem('vendas'));
